@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Oasis_Reader.Views.detail">
+    <ContentPage.Content>
+        <AbsoluteLayout >
+           
+            <Label  Text="Opciones Oasis Reader" FontSize="Medium" TextColor="Black" FontAttributes="Bold" AbsoluteLayout.LayoutBounds="70,10" ></Label>
+            <Label Text="Inventario" TextColor="Black" AbsoluteLayout.LayoutBounds="10,80"></Label>
+            <Label Text="Enviar Datos" TextColor="Black" AbsoluteLayout.LayoutBounds="10,170"></Label>
+            <Label Text="Actualizar Datos" TextColor="Black" AbsoluteLayout.LayoutBounds="10,260"></Label>
+            <Label Text="Borrar Datos" TextColor="Black" AbsoluteLayout.LayoutBounds="10,350"></Label>
+            <Label Text="Salir" TextColor="Black" AbsoluteLayout.LayoutBounds="10,440"></Label>
+            <ImageButton
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Source="botoninventario.png"
+                BackgroundColor="Transparent"
+                x:Name="botoniventario"
+                AbsoluteLayout.LayoutBounds="130, 50"
+                ></ImageButton>
+            
+            <ImageButton
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Source="botonenviardatos.png"
+                BackgroundColor="Transparent"
+                x:Name="botonenviardatos"
+                AbsoluteLayout.LayoutBounds="130, 140"
+                ></ImageButton>
+            <ImageButton
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Source="botonactualizar.png"
+                BackgroundColor="Transparent"
+                x:Name="botonactualizar"
+                AbsoluteLayout.LayoutBounds="130, 230"
+                ></ImageButton>
+            <ImageButton
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Source="botoeliminar.png"
+                BackgroundColor="Transparent"
+                x:Name="botoneliminar"
+                AbsoluteLayout.LayoutBounds="130, 320"
+                ></ImageButton>
+            <ImageButton
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Source="botonsalir.png"
+                BackgroundColor="Transparent"
+                x:Name="botonsalir"
+                AbsoluteLayout.LayoutBounds="130, 410"
+                ></ImageButton>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    <!--Programa para Actualizar Base de Datos desde Sybase-->
+    <!--Mediante Web Services pasa estructura a SQL Lite-->
+    <!--Realizado por: Ing Franklyn Tinoco 02-09-2019-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Actualizar Datos"
+             x:Class="Oasis_Reader.Views.PaginaActualizarDatos">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+           
+            <Label Text="Actualizar Datos"
+                AbsoluteLayout.LayoutBounds="120,0"></Label>
+            
+                <Label Text="Host:" FontSize="Default" TextColor="Black"
+                    AbsoluteLayout.LayoutBounds="0,30" />
+
+                <Entry x:Name="hostApi" Text="0.0.0.0" TextColor="Black" AbsoluteLayout.LayoutBounds="80,30"/>
+                <Label Text="Puerto:" FontSize="Default" TextColor="Black" AbsoluteLayout.LayoutBounds="0,60"      />
+
+                <Entry x:Name="puertoApi" Text="8080" TextColor="black" AbsoluteLayout.LayoutBounds="80,60"/>
+            <ProgressBar x:Name="progresoEnvio" Progress="0.0" HeightRequest="40" WidthRequest="300" VerticalOptions="EndAndExpand"
+                         HorizontalOptions="CenterAndExpand"  BackgroundColor="DarkSlateGray" IsVisible="False"/>
+            <Button x:Name="enviarDatos" Text="Recibir Datos" AbsoluteLayout.LayoutBounds="50,250"/>
+            <Button x:Name="salirEnviarArchivo" Text="Salir" AbsoluteLayout.LayoutBounds="250,250" />
+            <ActivityIndicator x:Name="activador"     Color="Blue" IsVisible="False"></ActivityIndicator>
+            
+
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Oasis_Reader.Login"
+             BackgroundImageSource="fondo"
+             StyleClass="header"
+             Title="Captura de Inventario">
+             
+    <ContentPage.Resources>
+        <StyleSheet Source="/styles/estilo.css" />
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <AbsoluteLayout>
+       <!--  <StackLayout BackgroundColor="White" Padding="0" > -->
+            <Image x:Name="fondo" Source="fondo"
+               Aspect="Fill"
+               AbsoluteLayout.LayoutBounds="0.0, 0.0, 1.0, 1.0"  
+               AbsoluteLayout.LayoutFlags="All">
+
+            </Image>
+
+            <StackLayout AbsoluteLayout.LayoutBounds="88,120">
+          
+            </StackLayout>
+            
+            <Frame BackgroundColor="White"  HasShadow="True" BorderColor="LightGray" AbsoluteLayout.LayoutBounds="50,255"  Padding="2" HorizontalOptions="CenterAndExpand"  VerticalOptions="StartAndExpand"  Margin="1" >
+                
+         
+                
+                    <StackLayout AbsoluteLayout.LayoutBounds="50,55">
+                    <Label x:Name="Lbl_Usuario" Text="Inicio de Sesión" FontAttributes="Bold"   BackgroundColor="white"  FontSize="Medium" TextColor="Black" HorizontalTextAlignment="Center"  />
+                    <Picker  x:Name ="ubics" Title="seleccionar"   ItemDisplayBinding="{Binding Descripcion}" SelectedItem="{Binding Cod_ubicacion, Mode=TwoWay}" SelectedIndex="{Binding Cod_ubicacion}" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"></Picker>
+                    <Entry x:Name ="Entry_Usuario" FontSize="Small" PlaceholderColor="Black" Placeholder="Nombre de usuario" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  AbsoluteLayout.LayoutBounds="1, 2, 1, 0.5" AbsoluteLayout.LayoutFlags="All"
+                TextColor="Black" StyleClass="entry"/>
+                
+                        <Entry x:Name="Entry_Password"    FontSize="Small"  PlaceholderColor="Black"  Placeholder="Clave"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  AbsoluteLayout.LayoutBounds="1, 4, 1, 0.5" AbsoluteLayout.LayoutFlags="All"
+                    TextColor="Black" IsPassword="True" StyleClass="entry"/>
+                 
+                </StackLayout>
+            
+            </Frame>
+
+            <Frame BackgroundColor="Transparent" BorderColor="Transparent" AbsoluteLayout.LayoutBounds="0,430" Padding="10,0,10,0" HorizontalOptions="Fill" VerticalOptions="Start" Margin="5" CornerRadius="16">
+            
+                <AbsoluteLayout  HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" >
+                  
+                    <ImageButton Source="entrada.png"
+                             BackgroundColor="Transparent"
+                             HorizontalOptions="StartAndExpand"    
+                             x:Name="botonimagen1"
+                             AbsoluteLayout.LayoutBounds="0, 1"
+        
+                     />
+                <ImageButton Source="salir.png"
+                             
+                             BackgroundColor="Transparent"
+                             HorizontalOptions="EndAndExpand"
+                             x:Name="botonimagen2"
+                            AbsoluteLayout.LayoutBounds="125, 1"
+                     />
+                    <ImageButton Source="ayuda.png"
+                             
+                             BackgroundColor="Transparent"
+                             HorizontalOptions="EndAndExpand"
+                             x:Name="botonimagen3"
+                            AbsoluteLayout.LayoutBounds="230, 1"
+                     />
+                </AbsoluteLayout>
+            </Frame>
+
+
+
+        <!-- </StackLayout> -->
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

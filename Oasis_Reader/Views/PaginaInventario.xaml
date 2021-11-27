@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Oasis_Reader.PaginaInventario"
+             >
+    
+    <ContentPage.Content>
+
+        <StackLayout Orientation="Vertical"  x:Name="InventarioLayout" 
+                     BackgroundColor="White"  Padding="7">
+
+
+            <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                <StackLayout  Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                               AbsoluteLayout.LayoutBounds="0, 1, 0.8, 1" AbsoluteLayout.LayoutFlags="All">
+                
+                    <Label Text="Ubicación:" FontSize="Default" TextColor="Black"
+                    HorizontalOptions="Start" VerticalOptions="CenterAndExpand"  />
+
+                    <Picker  x:Name ="ubics" Title="seleccionar"   ItemDisplayBinding="{Binding Descripcion}" SelectedItem="{Binding Cod_ubicacion, Mode=TwoWay}" SelectedIndex="{Binding Cod_ubicacion}" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" 
+                    TextColor="Black"/>
+                </StackLayout>
+
+                <Button x:Name="agregarUbicacion" Text="+" 
+                HorizontalOptions="End" AbsoluteLayout.LayoutBounds="1, 1, 0.2, 1" AbsoluteLayout.LayoutFlags="All"/>
+
+            </AbsoluteLayout>
+
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Horizontal">
+                <Label Text="Id de Dispositivo:" FontSize="Default" TextColor="Black"
+                HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+                <Entry x:Name ="disp"  HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+                
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                <Label Text="Pide Cantidad:" FontSize="Default" TextColor="Black"
+                HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  />
+
+                <Switch x:Name="pideCantidad" IsToggled="True" HorizontalOptions="CenterAndExpand"/>
+
+                <Label Text="Primer Conteo:" FontSize="Default" TextColor="Black"
+                HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  />
+
+                <Switch x:Name="primerConteo" IsToggled="False" HorizontalOptions="CenterAndExpand"/>
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                <Label x:Name="numconteolabel" Text="Conteo Num.:" FontSize="Default" TextColor="Black"
+                HorizontalOptions="Start" VerticalOptions="CenterAndExpand" />
+
+                <Entry x:Name="numconteo" Keyboard="Numeric" Placeholder="N°" HorizontalOptions="FillAndExpand" 
+                VerticalOptions="CenterAndExpand" TextColor="Black"  />
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                <Label Text="Departamento:" FontSize="Default" TextColor="Black"
+                HorizontalOptions="Start" VerticalOptions="CenterAndExpand"  />
+
+                <Picker x:Name="dep" Title="elegir" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" 
+                ItemDisplayBinding="{Binding Txt_descrip_dep}" TextColor="black"/>
+
+            </StackLayout>
+
+
+
+
+            <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="End">
+
+                <Button x:Name="aceptarInventario" Text="Aceptar" 
+                AbsoluteLayout.LayoutBounds="0, 1, 0.5, 1" AbsoluteLayout.LayoutFlags="All" />
+
+                <Button x:Name="salirInventario" Text="Salir"  AbsoluteLayout.LayoutBounds="1, 1, 0.5, 1"
+                AbsoluteLayout.LayoutFlags="All" />
+
+
+            </AbsoluteLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

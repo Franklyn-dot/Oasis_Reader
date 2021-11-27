@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Oasis_Reader.Views.PaginaInfoAdicional">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="DarkSlateGray">
+            <Label Text="Producto:" FontSize="Default" TextColor="White"
+            HorizontalOptions="Start" VerticalOptions="CenterAndExpand"  />
+
+            <Label x:Name="TituloLabel" Text="{Binding tituloActual}" FontSize="Default" TextColor="White"
+            HorizontalOptions="Start" VerticalOptions="CenterAndExpand"  />
+
+            <Label Text="Descripción:" FontSize="Default" TextColor="White"
+            HorizontalOptions="Start" VerticalOptions="CenterAndExpand"  />
+
+            <Label x:Name="DescripcionLabel" Text="{Binding descripcionActual}" FontSize="Default" TextColor="LightGray"
+            HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"  />
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+
+                <Label Text="Precio:" FontSize="Default" TextColor="White"
+                HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  />
+
+                <Label x:Name="PrecioLabel"  Text="{Binding precioActual}" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" 
+                TextColor="White"/>
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                <Label Text="Precio Unitario:" FontSize="Default" TextColor="DarkSlateGray"
+                HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"  />
+
+                <Label x:Name="PrecioTotal" Text="{Binding precioActual}" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" 
+                TextColor="LightGray"/>
+
+            </StackLayout>
+
+            <Button x:Name="atrasDetalles" Text="Atrás" HorizontalOptions="FillAndExpand" VerticalOptions="End"/>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

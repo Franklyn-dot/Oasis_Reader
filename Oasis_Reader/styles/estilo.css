@@ -1,0 +1,31 @@
+﻿.header
+{
+    font-size:large;
+    text-align:left;
+      
+}
+entry {
+    width: 260;
+    height: 40;
+    border:double;
+    border-color:darkgrey;
+    background-color: aliceblue;
+    border-bottom-style: groove;
+    border-bottom-color:black;
+    border-width:inherit;
+}
+#boxline
+{
+    background-color:black;
+    height:3;
+    margin-top:20;
+    margin-bottom:20;
+}
+tabbed1
+{
+    height:auto;
+    font-size:small;
+    width:auto;
+    font:bold;
+}
+

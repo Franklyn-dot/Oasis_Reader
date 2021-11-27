@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:Oasis_Reader.Views"
+             IconImageSource="icon.png"
+             x:Class="Oasis_Reader.Views.MenuOasisMaster"
+             Title="Menu de Opciones">
+  <StackLayout>
+    <ListView x:Name="MenuItemsListView"
+              SeparatorVisibility="Default"
+              HasUnevenRows="true"
+              ItemsSource="{Binding MenuItems}">
+      <d:ListView.ItemsSource>
+          <x:Array Type="{x:Type local:MenuOasisMasterMenuItem}">
+                    <local:MenuOasisMasterMenuItem Title="Inventario"   TargetType="{x:Type local:PaginaAceptarInventario}"  ></local:MenuOasisMasterMenuItem>
+                    <local:MenuOasisDetail Title="Enviar Datos" IconImageSource="telegram.png"></local:MenuOasisDetail>
+                    <local:MenuOasisDetail Title="Actualizar Datos" IconImageSource="telegram.png"></local:MenuOasisDetail>
+                    <local:MenuOasisDetail Title="Borrar Datos" IconImageSource="telegram.png"></local:MenuOasisDetail>
+                    <local:MenuOasisDetail Title="Salir" IconImageSource="telegram.png"></local:MenuOasisDetail>
+                </x:Array>
+      </d:ListView.ItemsSource>
+      <ListView.Header>
+        <Grid BackgroundColor="#03A9F4">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="10"/>
+          </Grid.RowDefinitions>
+          <Label
+              Grid.Column="1"
+              Grid.Row="2"
+              Text="Oasis Reader"
+               Style="{DynamicResource SubtitleStyle}"/>
+        </Grid>
+      </ListView.Header>
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand">
+              <Label VerticalOptions="FillAndExpand" 
+                    VerticalTextAlignment="Center" 
+                    Text="{Binding Title}" 
+                    d:Text="{Binding .}"
+                    FontSize="24"/>
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>

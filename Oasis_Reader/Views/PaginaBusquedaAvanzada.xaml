@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            
+             x:Class="Oasis_Reader.Views.PaginaBusquedaAvanzada">
+    <ContentPage.Content>
+        <Grid BackgroundColor="DarkSlateGray" ColumnSpacing="0" RowSpacing="0" HorizontalOptions="FillAndExpand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="30*" />
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand" 
+                         VerticalOptions="FillAndExpand" Grid.Column="0" Grid.Row="0">
+
+                <Label Text="Código:" FontSize="Default" TextColor="White"
+                HorizontalOptions="Start" VerticalOptions="CenterAndExpand"  />
+
+                <Entry x:Name="entryCodigo" Placeholder="############" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" 
+                TextColor="White" />
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand" 
+                         VerticalOptions="FillAndExpand" Grid.Column="0" Grid.Row="1">
+
+                <Label Text="Descripción:" FontSize="Default" TextColor="White"
+                HorizontalOptions="Start" VerticalOptions="CenterAndExpand"  />
+
+                <Entry x:Name="entryDescripcion" Placeholder="" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" 
+                TextColor="White" />
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand" 
+                         VerticalOptions="FillAndExpand" Grid.Column="0" Grid.Row="2">
+
+                <Label Text="Referencia:" FontSize="Default" TextColor="White"
+                HorizontalOptions="Start" VerticalOptions="CenterAndExpand"  />
+
+                <Entry x:Name="entryReferencia" Placeholder="" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" 
+                TextColor="White"  />
+
+            </StackLayout>
+
+
+            <StackLayout BackgroundColor="White" Orientation="Vertical" 
+                          VerticalOptions="End" Grid.Column="0" Grid.Row="3">
+
+                <ScrollView  BackgroundColor="White" Orientation="Both">
+
+                    <Grid x:Name="Data">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="90" />
+                            <ColumnDefinition Width="320" />
+                            <ColumnDefinition Width="400" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="70" />
+                            <ColumnDefinition Width="100" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackLayout  Grid.Column="0" Grid.Row="0"  
+                                                                HorizontalOptions="Start">
+
+                            <Label Text="Cod. Interno" />
+
+                            <ListView x:Name="infoProductos" HasUnevenRows="True" VerticalOptions="CenterAndExpand" CachingStrategy="RecycleElement"
+                                       SelectedItem="{Binding ProductoSeleccionado, Mode=TwoWay}"   HorizontalOptions="Start"
+                                       >
+
+                                <ListView.ItemTemplate HasUnevenRows="True" x:Uid="55">
+                                    <DataTemplate x:Name="template" >
+                                        <ViewCell x:Name="cell">
+                                            <Label x:Name="codInt" Text="{Binding Cod_interno}"  />
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+
+                        </StackLayout>
+
+
+                        <StackLayout  Grid.Column="1" Grid.Row="0"
+                                                                HorizontalOptions="Start">
+                            <Label Text="Descripción"  />
+
+                            <ListView x:Name="infoProductos2" HasUnevenRows="True" VerticalOptions="CenterAndExpand" 
+                                                                HorizontalOptions="Start" >
+                                <ListView.ItemTemplate HasUnevenRows="True" >
+                                    <DataTemplate >
+                                        <ViewCell IsEnabled="False">
+                                            <Label x:Name="nombre" Text="{Binding Txt_descripcion_larga}" />
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+
+                        </StackLayout>
+
+
+                        <StackLayout Grid.Column="2" Grid.Row="0">
+                            <Label Text="Detalles" />
+                            <ListView x:Name="infoProductos3" HasUnevenRows="True" VerticalOptions="CenterAndExpand" 
+                                            HorizontalOptions="Start" >
+                                <ListView.ItemTemplate HasUnevenRows="True" >
+                                    <DataTemplate >
+                                        <ViewCell IsEnabled="False">
+                                            <Label x:Name="detalles" Text="{Binding Txt_referencia}" />
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackLayout>
+
+
+                        <StackLayout  Grid.Column="3" Grid.Row="0">
+                            <Label Text="Precio" />
+                            <ListView x:Name="infoProductos4" HasUnevenRows="True" VerticalOptions="CenterAndExpand" 
+                                                                HorizontalOptions="Start">
+                                <ListView.ItemTemplate HasUnevenRows="True" >
+                                    <DataTemplate >
+                                        <ViewCell IsEnabled="False">
+                                            <Label x:Name="precio" Text="{Binding Precio}" />
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackLayout>
+
+
+                        <StackLayout Grid.Column="4" Grid.Row="0">
+                            <Label Text="Unidades"  />
+                            <ListView x:Name="infoProductos5" HasUnevenRows="True" VerticalOptions="CenterAndExpand" 
+                                                                HorizontalOptions="Start" >
+                                <ListView.ItemTemplate HasUnevenRows="True" >
+                                    <DataTemplate >
+                                        <ViewCell IsEnabled="False">
+                                            <Label x:Name="unidades" Text="{Binding Unid_empaque}" />
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackLayout>
+
+
+                        <StackLayout Grid.Column="5" Grid.Row="0">
+                            <Label Text="Departamento" />
+                            <ListView x:Name="infoProductos6" HasUnevenRows="True" VerticalOptions="CenterAndExpand" 
+                                                                HorizontalOptions="Start" >
+                                <ListView.ItemTemplate HasUnevenRows="True" >
+                                    <DataTemplate >
+                                        <ViewCell IsEnabled="False">
+
+                                            <Label x:Name="departamento" Text="{Binding Cod_departamento}" />
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackLayout>
+
+                        
+
+
+
+
+
+
+                    </Grid>
+
+                </ScrollView>
+            </StackLayout>
+
+
+
+
+   
+
+
+            <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+                            Grid.Column="0" Grid.Row="4">
+
+                <Button x:Name="buscarBusquedaAvanzada" Text="Buscar" 
+                AbsoluteLayout.LayoutBounds="0, 1, 0.5, 0.5" AbsoluteLayout.LayoutFlags="All" />
+
+                <Button x:Name="limpiarBusquedaAvanzada" Text="Limpiar"  AbsoluteLayout.LayoutBounds="1, 1, 0.5, 0.5"
+                AbsoluteLayout.LayoutFlags="All" />
+
+                <Button x:Name="aceptarBusquedaAvanzada" Text="Aceptar" 
+                AbsoluteLayout.LayoutBounds="0, 0, 0.5, 0.5" AbsoluteLayout.LayoutFlags="All" />
+
+                <Button x:Name="salirBusquedaAvanzada" Text="Salir"  AbsoluteLayout.LayoutBounds="1, 0, 0.5, 0.5"
+                AbsoluteLayout.LayoutFlags="All" />
+
+
+            </AbsoluteLayout>
+
+           
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

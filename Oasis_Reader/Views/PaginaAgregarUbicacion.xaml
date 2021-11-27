@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Oasis_Reader.Views.PaginaAgregarUbicacion"
+             >
+  
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+
+
+            <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                             AbsoluteLayout.LayoutBounds="0, 1, 0.6, 1" AbsoluteLayout.LayoutFlags="All">
+
+                    <Label Text="Código:" FontSize="Default" TextColor="White"
+                HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"  />
+
+                    <Entry x:Name="entryCodigoBarra" Placeholder="############" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" 
+                TextColor="White" />
+
+
+
+
+                </StackLayout>
+
+
+
+                <Button x:Name="introducirCodBarra" Text="Escanear" 
+                AbsoluteLayout.LayoutBounds="1, 1, 0.4, 1" AbsoluteLayout.LayoutFlags="All" />
+
+
+            </AbsoluteLayout>
+
+
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                             >
+                
+                <Label Text="Descripción:" FontSize="Default" TextColor="White"
+                HorizontalOptions="Start" VerticalOptions="CenterAndExpand"  />
+
+                <Entry x:Name="descripcionEntry"  FontSize="Default" TextColor="LightGray"
+                HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"  />
+
+
+
+
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                             >
+
+                <Label Text="ID:" FontSize="Default" TextColor="White"
+                HorizontalOptions="Start" VerticalOptions="CenterAndExpand"  />
+
+                <Entry x:Name="idEntry" FontSize="Default" TextColor="LightGray"
+                HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Keyboard="Numeric"  />
+
+
+
+
+            </StackLayout>
+
+
+
+
+
+
+
+            <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="End">
+
+                <Button x:Name="aceptarUbicacion" Text="Aceptar" 
+                AbsoluteLayout.LayoutBounds="0, 0, 1, 0.5" AbsoluteLayout.LayoutFlags="All" />
+
+                <Button x:Name="salirAgregarUbicacion" Text="Salir"  AbsoluteLayout.LayoutBounds="0, 1, 0.5, 0.5" AbsoluteLayout.LayoutFlags="All"  />
+
+
+                <Button x:Name="limpiarUbicacion" Text="Limpiar"  AbsoluteLayout.LayoutBounds="1, 1, 0.5, 0.5"
+                AbsoluteLayout.LayoutFlags="All" />
+
+
+            </AbsoluteLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

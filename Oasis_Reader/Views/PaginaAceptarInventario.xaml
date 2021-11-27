@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Oasis_Reader.PaginaAceptarInventario"
+             Title="Toma de Inventario">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="DarkSlateGray">
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                <Label Text="Código:" FontSize="Default" TextColor="White"
+                HorizontalOptions="Start" VerticalOptions="CenterAndExpand"  />
+
+                <Entry x:Name="entryCodigoBarra" Placeholder="############" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" 
+                TextColor="White" />
+                
+                
+                
+
+            </StackLayout>
+
+            <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                <Button x:Name="introducirCodBarra" Text="Escanear" 
+                AbsoluteLayout.LayoutBounds="0, 1, 0.5, 1" AbsoluteLayout.LayoutFlags="All" />
+
+                <Button x:Name="busquedaAvanzada" Text="Búsqueda Avanzada" 
+                AbsoluteLayout.LayoutBounds="1, 1, 0.5, 1" AbsoluteLayout.LayoutFlags="All" />
+
+            </AbsoluteLayout>
+            
+
+            <Label Text="Descripción:" FontSize="Default" TextColor="White"
+            HorizontalOptions="Start" VerticalOptions="CenterAndExpand"  />
+
+            <Label x:Name="DescripcionLabel" Text="{Binding descripcionActual}" FontSize="Default" TextColor="LightGray"
+            HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"  />
+            
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                <Label x:Name="entryCantidadLabel"  Text="Cantidad:" FontSize="Default" TextColor="White"
+                HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  />
+
+                <Entry x:Name="entryCantidad"  HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" 
+                TextColor="White" Keyboard="Numeric" />
+
+                
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                <Label Text="Precio:" FontSize="Default" TextColor="White"
+                    HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  />
+
+                <Label x:Name="PrecioTotal"  Text="{Binding precioTotal}" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" 
+                    TextColor="White"/>
+
+                <Label  Text=" Bs. " HorizontalOptions="Start" VerticalOptions="CenterAndExpand" 
+                    TextColor="White"/>
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                <Label Text="Precio Unitario:" FontSize="Default" TextColor="DarkSlateGray"
+                HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"  />
+
+                <Label x:Name="PrecioLabel" Text="{Binding precioActual}" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" 
+                TextColor="White"/>
+
+
+                <Label  Text=" Bs. " HorizontalOptions="Start" VerticalOptions="CenterAndExpand" 
+                    TextColor="White"/>
+
+            </StackLayout>
+
+            <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="End">
+
+                <Button x:Name="aceptarProducto" Text="Aceptar" 
+                AbsoluteLayout.LayoutBounds="0, 0, 0.5, 0.5" AbsoluteLayout.LayoutFlags="All" />
+
+                <Button x:Name="salirAceptarInventario" Text="Salir"  AbsoluteLayout.LayoutBounds="1, 0, 0.5, 0.5"
+                AbsoluteLayout.LayoutFlags="All" />
+
+                <Button x:Name="adicionalInventario" Text="Adicional" 
+                AbsoluteLayout.LayoutBounds="0, 1, 0.5, 0.5" AbsoluteLayout.LayoutFlags="All" />
+
+                <Button x:Name="limpiarInventario" Text="Limpiar"  AbsoluteLayout.LayoutBounds="1, 1, 0.5, 0.5"
+                AbsoluteLayout.LayoutFlags="All" />
+
+
+            </AbsoluteLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

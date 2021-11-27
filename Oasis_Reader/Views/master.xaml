@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:local="clr-namespace:Oasis_Reader.Views"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Oasis Reader"
+             x:Class="Oasis_Reader.Views.master">
+    
+    <ContentPage.Content>
+        
+            <StackLayout>
+            <Label Text="Menu de Opciones"
+                VerticalOptions="Start" 
+                FontSize="Medium"
+                FontAttributes="Bold"
+                HorizontalOptions="CenterAndExpand" />
+            <ListView HasUnevenRows="True" >
+                <ListView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Inventario</x:String>
+                        <x:String>Enviar Datos</x:String>
+                        <x:String>Actualizar Datos</x:String>
+                        <x:String>Borrar Datos</x:String>
+                        <x:String>Salir</x:String>
+                        </x:Array>
+                </ListView.ItemsSource>
+            </ListView>
+           
+           
+        </StackLayout>
+       
+    </ContentPage.Content>
+</ContentPage>

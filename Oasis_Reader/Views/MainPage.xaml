@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            
+             x:Class="Oasis_Reader.MainPage"
+             Title="Oasis Reader">
+
+    <AbsoluteLayout BackgroundColor="Black" >
+
+
+
+      
+
+        <!--<Image Source="NOMBREFONDOAQUI.jpg" AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                 AbsoluteLayout.LayoutFlags="All" />-->
+
+        <Button x:Name="inventario" Text="Inventario" AbsoluteLayout.LayoutBounds="0, 0, 0.5, 0.5"  
+                 x:FieldModifier="public"  AbsoluteLayout.LayoutFlags="All" BackgroundColor="LightGray" BorderColor="DarkGray" BorderWidth="1.0"/>
+
+        <Button x:Name="archivar" Text="Enviar Datos"  AbsoluteLayout.LayoutBounds="1, 0, 0.5, 0.5" 
+                 x:FieldModifier="public" AbsoluteLayout.LayoutFlags="All" BackgroundColor="LightGray" BorderColor="DarkGray" BorderWidth="1.0"/>
+
+        <Button x:Name="borrarTodo"  Text="Borrar Datos"  AbsoluteLayout.LayoutBounds="0.67, 0.67, 1, 0.25" 
+                  AbsoluteLayout.LayoutFlags="All"  BackgroundColor="LightGray" BorderColor="DarkGray" BorderWidth="1.0"/>
+
+        <Button x:Name="salir"  Text="Salir"  AbsoluteLayout.LayoutBounds="1, 1, 1, 0.25" 
+                 AbsoluteLayout.LayoutFlags="All"  BackgroundColor="LightGray" BorderColor="DarkGray" BorderWidth="1.0"/>
+
+        
+
+    </AbsoluteLayout>
+
+
+
+
+</ContentPage>
